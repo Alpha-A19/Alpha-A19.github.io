@@ -399,10 +399,6 @@ section .title::after{
 .cont-skills > div > img {
     height: 100%;
 }
-.cont-skills > div > img:hover {
-    height: 100%;
-}
-
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
