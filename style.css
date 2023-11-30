@@ -398,11 +398,9 @@ section .title::after{
 }
 .cont-skills > div > img {
     height: 100%;
-    filter: grayscale(100%);
 }
 .cont-skills > div > img:hover {
     height: 100%;
-    filter: grayscale(0%);
 }
 
 /* teams section styling */
