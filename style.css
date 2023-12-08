@@ -35,7 +35,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.about, .services, .skills, .proyects, .teams, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -126,6 +126,9 @@ section .title::after{
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+.menu-btn-scroll {
+    color: #000000;
 }
 .scroll-up-btn{
     position: fixed;
@@ -256,6 +259,10 @@ section .title::after{
     color:#fff;
     background: #111;
 }
+.proyects{
+    color:#000000;
+    background: #ffffff;
+}
 .services .title::before,
 .teams .title::before{
     background: #fff;
@@ -264,6 +271,11 @@ section .title::after{
 .teams .title::after{
     background: #111;
     content: "what i provide";
+}
+
+.proyects .title::after{
+    background: #ffffff;
+    content: "I have done";
 }
 .services .serv-content .card{
     width: calc(33% - 20px);
@@ -395,10 +407,25 @@ section .title::after{
 .cont-skills > div {
     height: 8vh;
     padding: 1vh;
+    margin: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .cont-skills > div > img {
     height: 100%;
 }
+.cont-skills > div > span {
+    font-weight: 500;
+    font-size: 18px;
+    padding-top: 1vh;
+}
+.htmlHover:hover {
+    /* background-color: #000000; */
+}
+
+
 /* teams section styling */
 .teams .title::after{
     content: "who with me";
@@ -438,6 +465,43 @@ section .title::after{
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover img{
+    border-color: #fff;
+}
+/* My proyects */
+.proyects .carousel .card{
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.proyects .carousel .card:hover{
+    background: crimson;
+}
+.proyects .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.proyects .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.proyects .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.proyects .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: 5px solid crimson;
+    transition: all 0.3s ease;
+}
+.proyects .carousel .card:hover img{
     border-color: #fff;
 }
 .owl-dots{
@@ -557,6 +621,36 @@ section .title::after{
   color: crimson;
   background: none;
 }
+.contBtn {
+    width: 100%;
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.btn-wsp{
+    position:fixed;
+    width:5vh;
+    height:5vh;
+    line-height: 60px;
+    bottom:105px;
+    right:25px;
+    background:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:35px;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+    z-index:100;
+    transition: all 300ms ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-wsp:hover{
+    background: #20ba5a;
+}
 /* footer section styling */
 footer{
     background: #111;
@@ -588,6 +682,9 @@ footer > div span:last-child{
     }
 }
 @media (max-width: 947px){
+    .home {
+        background-position: 55%;
+    }
     .menu-btn{
         display: block;
         z-index: 999;
@@ -616,6 +713,7 @@ footer > div span:last-child{
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+        color: #fff;
     }
     .home .home-content .text-2{
         font-size: 70px;
@@ -698,5 +796,8 @@ footer > div span:last-child{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+    .btn-wsp {
+        right: 10px;
     }
 }
