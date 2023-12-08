@@ -4,11 +4,11 @@ $(document).ready(function(){
         if(this.scrollY > 20){
             $('.navbar').addClass("sticky");
             $('.menu-btn').addClass("menu-btn-scroll");
-            $('#logo').attr("src", "./Recursos/LOGO-alpha-2.png");
+            $('#logo').attr("src", "./Recursos/LOGO-alpha.png");
         }else{
             $('.navbar').removeClass("sticky");
             $('.menu-btn').removeClass("menu-btn-scroll");
-            $('#logo').attr("src", "./Recursos/LOGO-alpha.png");
+            $('#logo').attr("src", "./Recursos/LOGO-alpha-2.png");
         }
         
         // scroll-up button show/hide script
